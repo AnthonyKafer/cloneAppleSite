@@ -1,0 +1,144 @@
+*{
+    font-family: Helvetica;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    color: unset;
+}
+
+body{
+    text-align: center;
+}
+
+/* Fontes */
+    h2{
+        font-size: 35px;
+        letter-spacing: 50px;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin: 2rem auto 1.5rem;
+    }
+
+    .mainLinks>li {
+        color: whitesmoke;
+    }
+
+    h1{
+        font-size: 60px;
+        margin: 3rem auto;
+    }
+
+    #text{
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    #price, .colorDescription{
+        color: rgb(95, 94, 94);
+        font-size: 20px;
+        font-weight: 540;
+    }
+
+    main>.buyBtn{
+        font-size: 25px;
+        padding: 1rem 2rem;
+        border-radius: 10rem;
+    }
+
+/* Divs */
+    .mainLinks{
+        display: flex;
+        background-color: rgb(32, 32, 32);
+        justify-content:space-evenly;
+        align-items: center;
+        padding: 0 10%;
+    }
+
+    .secondContainer{
+        display: flex;
+        justify-content:space-evenly;
+        align-items: center;
+        padding: 1rem;
+        box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.322);
+    }
+
+    #secondLinks{
+        width: 40%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #offerBanner{
+        background-color: rgba(102, 102, 102, 0.308);
+        color: rgb(34, 34, 34);
+        font-size: 15px;
+        padding: 1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main p{
+        max-width: 30%;
+        margin: 2rem auto 2rem;
+    }
+
+    .colorSelection ul{
+        display: flex;
+    }
+
+    .colorSelection{
+        display: flex;
+        justify-content: center;
+        gap: 10%;
+        margin-top: 10rem;
+        margin-bottom: 500px;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .colorSelection li{
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        align-items: center;
+        margin-bottom: 2.5rem;
+    }
+
+    .img{
+        margin-top: 6rem;
+        max-width: 80%;
+        min-width: 50%;
+    }
+
+/* Botões */
+    .colorContainer{
+        height: 3.2rem;
+        width: 3.2rem;
+        border-radius: 50%;
+        background-color: yellow;
+        margin-bottom: 1rem;
+    }
+
+    .buyBtn{
+        background-color: rgb(21, 72, 240);
+        padding: 0.4rem 1rem;
+        width: fit-content;
+        border-radius: 1rem;
+        color: whitesmoke;
+    }
+
+    .img{
+        opacity: 0.5;
+    }
+  
+
+/* Responsividade */
+
