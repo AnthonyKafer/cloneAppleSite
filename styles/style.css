@@ -51,8 +51,9 @@ body{
     .mainLinks{
         display: flex;
         background-color: rgb(32, 32, 32);
-        justify-content:space-evenly;
         align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
         padding: 0 10%;
     }
 
@@ -62,6 +63,7 @@ body{
         align-items: center;
         padding: 1rem;
         box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.322);
+        flex-wrap: wrap;
     }
 
     #secondLinks{
@@ -90,11 +92,11 @@ body{
         margin: 2rem auto 2rem;
     }
 
-    .colorSelection ul{
+    #colorSelection ul{
         display: flex;
     }
 
-    .colorSelection{
+    #colorSelection{
         display: flex;
         justify-content: center;
         gap: 10%;
@@ -102,14 +104,16 @@ body{
         margin-bottom: 500px;
         flex-wrap: wrap;
         width: 100%;
+        margin-inline: 1rem;
     }
 
-    .colorSelection li{
+    #colorSelection li{
         display: flex;
         flex-direction: column;
-        cursor: pointer;
         align-items: center;
         margin-bottom: 2.5rem;
+        cursor: pointer;
+        pointer-events: all;
     }
 
     .img{
@@ -125,6 +129,9 @@ body{
         border-radius: 50%;
         background-color: yellow;
         margin-bottom: 1rem;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.616);
+        cursor: pointer;
+        pointer-events: none;
     }
 
     .buyBtn{
@@ -136,20 +143,46 @@ body{
         opacity: 0.8;
     }
 
-    .img{
-        opacity: 0.5;
+    .image.transition{
+        opacity: 0.1;
+    }
+
+    .image{
+        margin-top: 5rem;
+        opacity: 1;
+        transition: 1s;
+    }
+    
+    #grafite .colorContainer{
+        background-color: #54524f;
+    }
+
+    #blue .colorContainer{
+        background-color: #a7c1d9;
+    }
+
+    #golden .colorContainer{
+        background-color: #fae7cf;
+    }
+
+    #green .colorContainer{
+        background-color: #394c38;
+    }
+
+    #silver .colorContainer{
+        background-color: #f1f2ed;
     }
 
 
 /* Interação de Botões */
-    .colorContainer:hover{
+    li:hover > .colorContainer:not(.selected){
         outline: 2px solid #0936ff88;
         outline-offset: 0.2rem;
     }
 
-    .colorContainer:active{
-        outline: 2px solid #002fff;
-        outline-offset: 0;
+    .colorContainer.selected{
+        outline: 3px solid #002fff;
+        outline-offset: 2px;
     }
 
     .buyBtn:hover{
@@ -172,5 +205,50 @@ body{
         text-decoration: none;
     }
 
-/* Responsividade */
 
+/* Responsividade */
+    @media (max-width: 690px) {
+        .mainLinks li{
+            display: none;
+        }
+
+        .mainLinks li:first-child{
+            display: flex;
+        }
+
+        #secondLinks{
+            display: none;
+        }
+
+        #iphoneHeader{
+            align-self: center;
+            justify-self: center;
+        }
+
+        #text{
+            width: 80%;
+        }
+
+        #colorSelection{
+            padding: 1rem;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .mainLinks{
+            padding: 0 1%;
+        }
+
+        #secondLinks{
+            flex-wrap: wrap;
+            text-wrap: nowrap;
+        }
+
+        #secondLinks li{
+            margin: 0.5rem;
+        }
+
+        h2{
+            letter-spacing: 20px;
+        }
+    }
