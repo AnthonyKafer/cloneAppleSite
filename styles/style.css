@@ -71,7 +71,7 @@ body{
     }
 
     #offerBanner{
-        background-color: rgba(102, 102, 102, 0.308);
+        background-color: rgba(102, 102, 102, 0.075);
         color: rgb(34, 34, 34);
         font-size: 15px;
         padding: 1rem;
@@ -133,12 +133,44 @@ body{
         width: fit-content;
         border-radius: 1rem;
         color: whitesmoke;
+        opacity: 0.8;
     }
 
     .img{
         opacity: 0.5;
     }
-  
+
+
+/* Interação de Botões */
+    .colorContainer:hover{
+        outline: 2px solid #0936ff88;
+        outline-offset: 0.2rem;
+    }
+
+    .colorContainer:active{
+        outline: 2px solid #002fff;
+        outline-offset: 0;
+    }
+
+    .buyBtn:hover{
+        opacity: 1;
+        background-color: rgb(0, 42, 182);
+        box-shadow: 0 0 10px rgba(94, 115, 185, 0.555); 
+    }
+    .buyBtn:active{
+        opacity: 1;
+        background-color: rgb(2, 28, 114);
+        color: rgb(255, 255, 255);
+    }
+
+    header a:hover:not(.buyBtn){
+        text-decoration: underline;
+    }
+
+    header a:active:not(.buyBtn){
+        color: #002fff;
+        text-decoration: none;
+    }
 
 /* Responsividade */
 
